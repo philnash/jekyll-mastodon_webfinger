@@ -15,3 +15,6 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Style/SymbolArray:
+  Enabled: false
