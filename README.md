@@ -4,6 +4,7 @@ This is a [Jekyll](https://jekyllrb.com/) plugin that adds a [WebFinger](https:/
 
 * [What?](#what)
 * [How to use](#how-to-use)
+  * [Config](#config)
   * [Drawbacks](#drawbacks)
 * [Development](#development)
 * [Contributing](#contributing)
@@ -33,20 +34,31 @@ Or by opening the `Gemfile`, adding:
 
 and then running `bundle install`.
 
-Then in your Jekyll site's `_config.yml` file add your Mastodon account details. For example:
+### Config
 
-```yml
-mastodon:
-  username: philnash
-  instance: mastodon.social
-```
+You need to add three things to your `_config.yml` file.
 
-Also, add `jekyll/mastodon_webfinger` to the `plugins` list in `_config.yml`:
+1. Add your Mastodon account details. For example:
 
-```yml
-plugins:
-  - jekyll/mastodon_webfinger
-```
+   ```yml
+   mastodon:
+     username: philnash
+     instance: mastodon.social
+   ```
+
+2. Add `jekyll/mastodon_webfinger` to the `plugins` list:
+
+   ```yml
+     plugins:
+       - jekyll/mastodon_webfinger
+   ```
+
+3. Add `".well-known/webfinger"` to the `keep_files` list:
+
+   ```yml
+   keep_files: [".well-known/webfinger"]
+   ```
+
 
 Next time you build your Jekyll site, you will find a `/.well-known/` directory in the output with a `webfinger` file that contains the required JSON.
 
