@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
+require "json"
+require "jekyll"
 require_relative "mastodon_webfinger/version"
-
-module Jekyll
-  module MastodonWebfinger
-    class Error < StandardError; end
-    # Your code goes here...
-  end
-end
+require_relative "mastodon_webfinger/generator"

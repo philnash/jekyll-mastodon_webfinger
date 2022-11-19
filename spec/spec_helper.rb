@@ -8,8 +8,8 @@ end
 
 require "jekyll/mastodon_webfinger"
 
-SOURCE_DIR = File.expand_path("../fixtures", __dir__)
-DEST_DIR = File.expand_path("../dest", __dir__)
+SOURCE_DIR = File.expand_path("fixtures", __dir__)
+DEST_DIR = File.expand_path("dest", __dir__)
 
 def source_dir(*files)
   File.join(SOURCE_DIR, *files)
