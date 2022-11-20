@@ -47,7 +47,7 @@ and then running `bundle install`.
 
 ### Config
 
-You need to add three things to your `_config.yml` file.
+You need to add two things to your `_config.yml` file.
 
 1. Add your Mastodon account details. For example:
 
@@ -63,13 +63,6 @@ You need to add three things to your `_config.yml` file.
      plugins:
        - jekyll/mastodon_webfinger
    ```
-
-3. Add `".well-known/webfinger"` to the `keep_files` list:
-
-   ```yml
-   keep_files: [".well-known/webfinger"]
-   ```
-
 
 Next time you build your Jekyll site, you will find a `/.well-known/` directory in the output with a `webfinger` file that contains the required JSON.
 
