@@ -1,8 +1,15 @@
 # `Jekyll::MastodonWebfinger`
 
-This is a [Jekyll](https://jekyllrb.com/) plugin that adds a [WebFinger](https://webfinger.net/) file to your site, allowing you to use your own domain to help others discover your [Mastodon](https://joinmastodon.org/) profile.
+<h2>Use your Jekyll website domain as an alias for your Mastodon username</h2>
+
+This is a [Jekyll](https://jekyllrb.com/) plugin that adds a [WebFinger](https://webfinger.net/) file to your site, allowing you to use your own domain as an alias to help others discover your [Mastodon](https://joinmastodon.org/) profile.
+
+<h3>Try it out</h3>
+
+Search Mastodon for `@phil@philna.sh` and you will find my Mastodon profile.
 
 * [What?](#what)
+  * [Alternatives](#alternatives)
 * [How to use](#how-to-use)
   * [Config](#config)
   * [Drawbacks](#drawbacks)
@@ -13,14 +20,18 @@ This is a [Jekyll](https://jekyllrb.com/) plugin that adds a [WebFinger](https:/
 
 ## What?
 
-You may be tempated to run your own Mastodon instance so that you can use your own domain. But that's probably hard work.
+You may be tempted to run your own Mastodon instance so that you can use your own domain. If you don't want the work of managing a server you can instead use your domain as an alias to point to your Mastodon profile.
 
-Instead, you can use your domain to point to your profile on a Mastodon instance that you are signed up to. This uses [WebFinger](https://webfinger.net/), which is a way to attach information to an email address or other online resource. In this case you can point email addresses on your own domain to your Mastodon profile.
+This uses [WebFinger](https://webfinger.net/), which is a way to attach information to an email address or other online resource. In this case you can point email addresses on your own domain to your Mastodon profile.
 
-For example, I have a Mastodon profile at [@philnash@mastodon.social](https://mastodon.social/@philnash). If I add this plugin to my Jekyll site at https://philna.sh and set the username to `philnash` and the instance to `mastodon.social`, then you will be able to find my account by searching for "phil@philna.sh" in any Mastodon instance.
+For example, I have a Mastodon profile at [@philnash@mastodon.social](https://mastodon.social/@philnash). If I add this plugin to my Jekyll site at https://philna.sh and set the username to `philnash` and the instance to `mastodon.social`, then you will be able to find my account by searching for `phil@philna.sh` in any Mastodon instance.
 
 For a more in depth explanation, check out [Mastodon on your own domain without hosting a server
 by Maarten Balliauw](https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html).
+
+### Alternatives
+
+* @dkundel's [netlify-plugin-mastodon-alias](https://github.com/dkundel/netlify-plugin-mastodon-alias)
 
 ## How to use
 
